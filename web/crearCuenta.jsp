@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Iniciar Sesion</title>
+        <title>Registrate</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -43,6 +43,8 @@
 							
 							<div class="row uniform 50%">
 								<div class="12u">
+                                                                    
+                                                                    
 									<input type="email" name="btnEmail" id="email"  placeholder="Email" />
 								</div>
 							</div>
@@ -51,7 +53,18 @@
                                                                     <input type="password" name="btnPassword" id="password"  placeholder="Password" />
 								</div>
 							</div>
-							
+							<div class="row uniform 50%">
+                                                            <div class="12u">
+                                                                <div class="select-wrapper">
+                                                                    <select name="tipoUsuario" id="category">
+									<option value="3">Profecional</option>
+									<option value="2">Empresa</option>
+									
+														
+                                                                    </select>
+								</div>
+                                                            </div>
+							</div>
 							<div class="row uniform">
 								<div class="12u">
 									<ul class="actions align-center">
@@ -59,6 +72,7 @@
 									</ul>
 								</div>
 							</div>
+                                                        
 						</form>
 					</div>
 				</section>
