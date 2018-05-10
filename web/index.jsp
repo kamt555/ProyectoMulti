@@ -25,7 +25,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="index.jsp">Home</a></li>
-                                                        <li><a href="#">Buscar Ofertas</a></li>
+                                                        <li><a href="nuevaEntrada.jsp">Buscar Ofertas</a></li>
 							<li><a href="crearCuenta.jsp" class="button">Regístrate</a></li>
 							<li><a href="login.jsp" class="button">Iniciar Sesión</a></li>
 						</ul>
@@ -38,7 +38,7 @@
 					<p>Entérate acerca de oportunidades de  empleos disponibles, el proceso de aplicación y de cómo es contactarlos </p>
 					<ul class="actions">
 						<li><a href="crearCuenta.jsp" class="button special">Registrate</a></li>
-						<li><a href="#" class="button">Buscar Ofertas</a></li>
+						<li><a href="nuevaEntrada.jsp" class="button">Buscar Ofertas</a></li>
 					</ul>
 				</section>
 

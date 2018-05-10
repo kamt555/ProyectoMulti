@@ -1,6 +1,6 @@
 <%-- 
-    Document   : login
-    Created on : 05-10-2018, 03:37:29 PM
+    Document   : nuevaEntrada
+    Created on : 05-10-2018, 04:46:14 PM
     Author     : kamt
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Iniciar Sesion</title>
+        <title>Buscar Ofertas</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -33,35 +33,24 @@
 				</header>
 
 			<!-- Main -->
-				<section id="main" class="container 75%">
+				<section id="main" class="container">
 					<header>
-						<h2>Iniciar Sesión</h2>
-						<p></p>
+						<h2>Busca la mejor oferta</h2>
+						
 					</header>
+					
+				</section>
+                                <!-- generar con un for para cada entrada -->
+				<section id="main" class="container">
+					
 					<div class="box">
-						<form method="post" action="#">
-							
-							<div class="row uniform 50%">
-								<div class="12u">
-									<input type="email" name="btnEmail" id="email"  placeholder="Email" />
-								</div>
-							</div>
-                                                        <div class="row uniform 50%">
-								<div class="12u">
-                                                                    <input type="password" name="btnPassword" id="password"  placeholder="Password" />
-								</div>
-							</div>
-							
-							<div class="row uniform">
-								<div class="12u">
-									<ul class="actions align-center">
-										<li><input type="submit" value="Entrar" name="btnEnviar" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
+						
+						<h3>Entrada 1</h3>
+						<p>descricion</p>
+						
 					</div>
 				</section>
+
 
 			<!-- Footer -->
 				<footer id="footer">

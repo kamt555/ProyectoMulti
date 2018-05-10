@@ -25,7 +25,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="index.jsp">Home</a></li>
-                                                        <li><a href="#">Buscar Ofertas</a></li>
+                                                        <li><a href="nuevaEntrada.jsp">Buscar Ofertas</a></li>
 							<li><a href="crearCuenta.jsp" class="button">Regístrate</a></li>
 							<li><a href="login.jsp" class="button">Iniciar Sesión</a></li>
 						</ul>
@@ -53,19 +53,26 @@
                                                                     <input type="password" name="btnPassword" id="password"  placeholder="Password" />
 								</div>
 							</div>
-							<div class="row uniform 50%">
-                                                            <div class="12u">
-                                                                <div class="select-wrapper">
-                                                                    <h4>Tipo de cuenta:</h4>
+							
+                                                        <div class="row uniform 50%">
+							<div class="6u 12u(mobilep)">
+								
+							<p><h4>Tipo de cuenta:</h4></p>
+							</div>
+							<div class="6u 12u(mobilep)">
+								<div class="select-wrapper">
+                                                                    
                                                                     <select name="tipoUsuario" id="category">
 									<option value="3">Profecional</option>
 									<option value="2">Empresa</option>
 									
 														
                                                                     </select>
-								</div>
-                                                            </div>
-							</div>
+								</div></div>
+                                                        </div>
+                                                    
+                                                    
+                                                    
 							<div class="row uniform">
 								<div class="12u">
 									<ul class="actions align-center">
