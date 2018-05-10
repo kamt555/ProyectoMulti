@@ -21,13 +21,13 @@
 
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1><a href="index.html">Alpha for you</a> </h1>
+					<h1><a href="index.jsp">Alpha for you</a> </h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="#">Home</a></li>
+							<li><a href="index.jsp">Home</a></li>
                                                         <li><a href="#">Buscar Ofertas</a></li>
 							<li><a href="#" class="button">Regístrate</a></li>
-							<li><a href="#" class="button">Iniciar Sesión</a></li>
+							<li><a href="login.jsp" class="button">Iniciar Sesión</a></li>
 						</ul>
 					</nav>
 				</header>
