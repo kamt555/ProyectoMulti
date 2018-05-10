@@ -1,6 +1,6 @@
 <%-- 
-    Document   : login
-    Created on : 05-10-2018, 03:37:29 PM
+    Document   : crearCuenta
+    Created on : 05-10-2018, 03:59:46 PM
     Author     : kamt
 --%>
 
@@ -26,7 +26,7 @@
 						<ul>
 							<li><a href="index.jsp">Home</a></li>
                                                         <li><a href="#">Buscar Ofertas</a></li>
-							<li><a href="#" class="button">Regístrate</a></li>
+							<li><a href="crearCuenta.jsp" class="button">Regístrate</a></li>
 							<li><a href="login.jsp" class="button">Iniciar Sesión</a></li>
 						</ul>
 					</nav>
@@ -35,7 +35,7 @@
 			<!-- Main -->
 				<section id="main" class="container 75%">
 					<header>
-						<h2>Iniciar Sesión</h2>
+						<h2>Regístrate</h2>
 						<p></p>
 					</header>
 					<div class="box">
