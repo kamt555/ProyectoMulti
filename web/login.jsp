@@ -26,7 +26,7 @@
 						<ul>
 							<li><a href="index.jsp">Home</a></li>
                                                         <li><a href="#">Buscar Ofertas</a></li>
-							<li><a href="#" class="button">Regístrate</a></li>
+							<li><a href="crearCuenta.jsp" class="button">Regístrate</a></li>
 							<li><a href="login.jsp" class="button">Iniciar Sesión</a></li>
 						</ul>
 					</nav>

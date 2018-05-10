@@ -56,6 +56,7 @@
 							<div class="row uniform 50%">
                                                             <div class="12u">
                                                                 <div class="select-wrapper">
+                                                                    <h4>Tipo de cuenta:</h4>
                                                                     <select name="tipoUsuario" id="category">
 									<option value="3">Profecional</option>
 									<option value="2">Empresa</option>
