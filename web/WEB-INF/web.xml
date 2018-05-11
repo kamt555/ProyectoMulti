@@ -16,6 +16,10 @@
         <servlet-name>ProcesarTipoEmpresa</servlet-name>
         <servlet-class>com.controlador.ProcesarTipoEmpresa</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProcesarTipoVacante</servlet-name>
+        <servlet-class>com.controlador.ProcesarTipoVacante</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProcesarLogin</servlet-name>
         <url-pattern>/procesarLogin</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>ProcesarTipoEmpresa</servlet-name>
         <url-pattern>/procesarTipoEmpresa</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProcesarTipoVacante</servlet-name>
+        <url-pattern>/procesarTipoVacante</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
