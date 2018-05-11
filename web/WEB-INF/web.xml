@@ -8,6 +8,10 @@
         <servlet-name>ProcesarProfecion</servlet-name>
         <servlet-class>com.controlador.ProcesarProfecion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProcesarDepartamento</servlet-name>
+        <servlet-class>com.controlador.ProcesarDepartamento</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProcesarLogin</servlet-name>
         <url-pattern>/procesarLogin</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ProcesarProfecion</servlet-name>
         <url-pattern>/procesarProfecion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProcesarDepartamento</servlet-name>
+        <url-pattern>/procesarDepartamento</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

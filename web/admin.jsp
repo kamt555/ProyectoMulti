@@ -62,7 +62,7 @@
                                                 <div class="12u">
                                             <p>
                                                 Acceder a <a href="crudProfesion.jsp">Crud Profecion</a><br>
-                                                Acceder a <a href="../proveedor.jsp">Crud Proveedor</a>
+                                                Acceder a <a href="crudDepartamento.jsp">Crud Departamento</a>
             
                                             </p>
                                             </div>

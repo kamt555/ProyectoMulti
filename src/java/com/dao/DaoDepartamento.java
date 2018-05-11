@@ -5,8 +5,9 @@
  */
 package com.dao;
 
+
 import com.conexion.Conexion;
-import com.modelo.Profesion;
+import com.modelo.Departamento;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -16,22 +17,21 @@ import java.util.List;
  *
  * @author kamt
  */
-public class DaoProfesion extends Conexion{
-    
-     public List<Profesion> mostrarProfesion() throws Exception{
+public class DaoDepartamento extends Conexion{
+    public List<Departamento> mostrarDepartamento() throws Exception{
         ResultSet rs;
-        List<Profesion> lst=new ArrayList();
+        List<Departamento> lst=new ArrayList();
         
         try {
             this.conectar();
-            String sql="select * from profesion";
+            String sql="select * from departamento";
             PreparedStatement pre=this.getCon().prepareStatement(sql);
             rs=pre.executeQuery();
             
             while(rs.next()){
-                Profesion prv = new Profesion();
-                prv.setIdProfesion(rs.getInt("idProfesion"));
-                prv.setNombrePprofesion(rs.getString("nombrePprofesion"));
+                Departamento prv = new Departamento();
+                prv.setIdDepartamento(rs.getInt("idDepartamento"));
+                prv.setNombreDepto(rs.getString("nombreDepto"));
                 
                 lst.add(prv);
             
@@ -50,14 +50,16 @@ public class DaoProfesion extends Conexion{
     
     }
     
-    public void agregarProfesion(Profesion prv) throws Exception{
+    
+    
+    public void agregarDepartamento(Departamento prv) throws Exception{
         try {
             this.conectar();
-            String sql="insert into profesion values(?,?)";
+            String sql="insert into departamento values(?,?)";
             PreparedStatement pre= this.getCon().prepareStatement(sql);
             
-            pre.setInt(1, prv.getIdProfesion());
-            pre.setString(2, prv.getNombrePprofesion());
+            pre.setInt(1, prv.getIdDepartamento());
+            pre.setString(2, prv.getNombreDepto());
             
             pre.executeUpdate();
         } catch (Exception e) {
@@ -72,13 +74,13 @@ public class DaoProfesion extends Conexion{
     
     }
     
-    public void eliminarProfesion(Profesion prv) throws Exception{
+    public void eliminarDepartamento(Departamento prv) throws Exception{
         try {
             this.conectar();
-            String sql="delete from profesion where idProfesion=?";
+            String sql="delete from departamento where idDepartamento=?";
             PreparedStatement pre= this.getCon().prepareStatement(sql);
             
-            pre.setInt(1, prv.getIdProfesion());
+            pre.setInt(1, prv.getIdDepartamento());
             
             pre.executeUpdate();
         } catch (Exception e) {
@@ -93,15 +95,15 @@ public class DaoProfesion extends Conexion{
     
     }
     
-    public void midificarProfesion(Profesion prv) throws Exception{
+    public void modificarDepartamento(Departamento prv) throws Exception{
         try {
             this.conectar();
-            String sql="update profesion set nombrePprofesion=? where idProfesion=?";
+            String sql="update departamento set nombreDepto=? where idDepartamento=?";
             PreparedStatement pre= this.getCon().prepareStatement(sql);
             
             
-            pre.setString(1, prv.getNombrePprofesion());
-            pre.setInt(2, prv.getIdProfesion());
+            pre.setString(1, prv.getNombreDepto());
+            pre.setInt(2, prv.getIdDepartamento());
             
             pre.executeUpdate();
         } catch (Exception e) {
@@ -115,5 +117,4 @@ public class DaoProfesion extends Conexion{
     
     
     }
-    
 }
