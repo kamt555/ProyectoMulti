@@ -4,6 +4,9 @@
     Author     : kamt
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="com.modelo.Profesion"%>
+<%@page import="com.dao.DaoProfesion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true" %>
 <%
@@ -28,6 +31,33 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Crud Profecion</title>
+        <script Language='JavaScript'>
+            function cargar(idProfesion,nombrePprofesion){
+               document.frmProfesion.txtCodigo.value=idProfesion; 
+               document.frmProfesion.txtNombre.value=nombrePprofesion;
+               
+               
+                
+                
+            }
+            
+            
+        </script>
+        
+        
+        <% 
+            if(request.getAttribute("msj")!=null){
+        
+        %>
+        <script type="text/javascript">
+            
+            alert('<%= request.getAttribute("msj") %>');
+            
+        </script>
+        
+        <%
+            }    
+        %>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -44,7 +74,7 @@
 					
 					<nav id="nav">
 						<ul> 
-                                                        <li> <a href="admin" class="button">Regersar</a></li>
+                                                        <li> <a href="admin.jsp" class="button">Regersar</a></li>
 							<li> <a href="login.jsp?cerrar=true" class="button">Cerrar Sesion</a></li>
                                                         
 							
@@ -55,21 +85,111 @@
 			<!-- Main -->
 				<section id="main" class="container 75%">
 					<header>
-						<h2>Crud Profecion</h2>
+						<h2>Crud Profesion</h2>
 						<p></p>
 					</header>
 					<div class="box">
-                                            <div class="row uniform 50%">
-                                                <div class="12u">
-                                                    
-                                                    
-                                                    
                                             
-                                                </div>
-                                            </div>
-						
+                                            <form method="post"  name="frmProfesion" action="procesarProfecion">
+                                                    
+							
+							
+                                                            <!-- el idusuario y idPersona son auto increment    -->
+                                                            
+                                                            <div class="row uniform 50%" >
+                                                                <div class=" 12u(mobilep)">
+								
+                                                                    <h4>Codigo Profesion:</h4>
+                                                                </div>
+                                                            <div class="12u">
+								<input type="text" name="txtCodigo" id="name"  placeholder="Codigo" />
+                                                            </div>
+                                                         </div>   
+                                                         
+                                                        
+                                                        
+                                                            <!-- el idusuario y idPersona son auto increment    -->
+                                                            
+                                                            <div class="row uniform 50%">
+                                                                <div class=" 12u">
+								
+                                                                    <h4>Nombre:</h4>
+                                                                </div>
+                                                            <div class=" 12u">
+								<input type="text" name="txtNombre" id="name"  placeholder="Nombre" />
+                                                            </div>
+                                                         </div>   
+                                                        
+                                                    
+                                                    
+                                                        
+                                                         
+                                                    
+                                                    
+                                                    
+                                                        
+                                                       
+                                                    
+                                                    
+                                                    
+							<div class="row uniform">
+								<div class="12u">
+									<ul class="actions align-center">
+										<li><input type="submit" value="Agregar" name="btnEnviar" /></li>
+                                                                                <li><input type="submit" value="Modificar" name="btnModificar" /></li>
+                                                                                <li><input type="submit" value="Eliminar" name="btnEliminar" /></li>
+                                                                                <li><input type="reset" value="Limpiar" /></li>
+									</ul>
+                                                                        
+								</div>
+							</div>
+                                                            
+                                                       
+						</form>
 					</div>
 				</section>
+                        
+                                
+                                <section  class="box">
+					<h3>Profesiones</h3>
+
+					
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Codigo</th>
+									<th>Nombre</th>
+									<th>Selecionar</th>
+								</tr>
+							</thead>
+							<tbody>
+                                                            <%
+                                                                DaoProfesion daoP=new DaoProfesion();
+                                                                List<Profesion> lst=daoP.mostrarProfesion();
+                                                                for(Profesion prv:lst){
+                
+                                                            %>
+                                                        <tr>
+                                                            <td><%=  prv.getIdProfesion() %></td>
+                                                            <td><%= prv.getNombrePprofesion()  %></td>
+                                                            
+                                                            <td><a href="javascript:cargar(<%=prv.getIdProfesion()%>,'<%=prv.getNombrePprofesion()%>')">Selecionar</a></td>
+
+                                                        </tr>
+                                                            <%  
+                                                                }
+                                                            %>
+                                                                                            
+                                                                                            
+                                                                                            
+							</tbody>
+											
+						</table>
+					</div>
+                                        
+                                </section>
+                                                           
 
 			<!-- Footer -->
 				<footer id="footer">
