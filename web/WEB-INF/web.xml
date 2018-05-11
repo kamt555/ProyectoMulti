@@ -32,6 +32,10 @@
         <servlet-name>ProcesarCrearCuenta</servlet-name>
         <servlet-class>com.controlador.ProcesarCrearCuenta</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProcesarEmpresa</servlet-name>
+        <servlet-class>com.controlador.ProcesarEmpresa</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProcesarLogin</servlet-name>
         <url-pattern>/procesarLogin</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>ProcesarCrearCuenta</servlet-name>
         <url-pattern>/procesarCrearCuenta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProcesarEmpresa</servlet-name>
+        <url-pattern>/procesarEmpresa</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
