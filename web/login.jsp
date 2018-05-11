@@ -39,16 +39,16 @@
 						<p></p>
 					</header>
 					<div class="box">
-						<form method="post" action="#">
+						<form method="post" action="procesarLogin">
 							
 							<div class="row uniform 50%">
 								<div class="12u">
-									<input type="email" name="btnEmail" id="email"  placeholder="Email" />
+									<input type="email" name="txtEmail" id="email"  placeholder="Email" />
 								</div>
 							</div>
                                                         <div class="row uniform 50%">
 								<div class="12u">
-                                                                    <input type="password" name="btnPassword" id="password"  placeholder="Password" />
+                                                                    <input type="password" name="txtPassword" id="password"  placeholder="Password" />
 								</div>
 							</div>
 							
@@ -88,5 +88,40 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+                        
+                        <% 
+            HttpSession sesion=request.getSession();
+            int idTipoUsuario=0;
+            if(request.getAttribute("idTipoUsuario")!= null){
+                idTipoUsuario=(Integer) request.getAttribute("idTipoUsuario");
+                if(idTipoUsuario== 1){  
+                    sesion.setAttribute("idUsuario",request.getAttribute("idUsuario"));
+                    sesion.setAttribute("idTipoUsuario", idTipoUsuario);
+                    response.sendRedirect("admin.jsp");
+                
+                
+                }else if(idTipoUsuario== 2){  
+                    sesion.setAttribute("idUsuario",request.getAttribute("idUsuario"));
+                    sesion.setAttribute("idTipoUsuario", idTipoUsuario);
+                    response.sendRedirect("usuariosEmpre.jsp");
+                
+                
+                }else if(idTipoUsuario== 3){  
+                    sesion.setAttribute("idUsuario",request.getAttribute("idUsuario"));
+                    sesion.setAttribute("idTipoUsuario", idTipoUsuario);
+                    response.sendRedirect("usuariosProf.jsp");
+                
+                
+                }
+                
+            }
+            
+            if(request.getParameter("cerrar")!= null){
+            
+                sesion.invalidate();
+            
+            }
+        
+        %>
     </body>
 </html>
