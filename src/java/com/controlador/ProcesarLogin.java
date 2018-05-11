@@ -49,7 +49,7 @@ public class ProcesarLogin extends HttpServlet {
             urs.setContrasenia(request.getParameter("txtPassword"));
             idTipoUsuario=obj.validarUsuario(urs);
             request.setAttribute("idTipoUsuario", idTipoUsuario);
-            request.setAttribute("idUsuario", urs.getIdUsuario());
+            request.setAttribute("idUsuario", urs.getCorreo());
             rd=request.getRequestDispatcher("login.jsp");
         
         }

@@ -4,6 +4,9 @@
     Author     : kamt
 --%>
 
+<%@page import="com.modelo.Vacante"%>
+<%@page import="java.util.List"%>
+<%@page import="com.dao.DaoNuevaEntrada"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -82,18 +85,38 @@
 
 					<div class="row">
              <!--    Con un for colocar los ultimos puestos       -->
+             
+             
+             
+                                                 <%
+                                                       DaoNuevaEntrada daoPro=new DaoNuevaEntrada();
+                                                         List<Vacante> lstPv=daoPro.mostrarVacante();
+                                                         for(Vacante d:lstPv ){
+            
+                                                 %>
+                                <!-- generar con un for para cada entrada -->
+				
+                                                                              
+             
 						<div class="6u 12u(narrower)">
 
 							<section class="box special">
 								<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
-								<h3>puesto</h3>
-								<p>descripcion</p>
-								<ul class="actions">
-									<li><a href="#" class="button alt">Leer mas</a></li>
-								</ul>
+								<h3>Codigo de Vacante: <%=d.getIdVacante()  %></h3>
+                                                                <h4>Nº de puestos <%=d.getNoVacantes()  %></h4>
+                                                                <p>Especificacion de la vacante: <%=d.getEspecificaciones()  %></p>
+                                                                <ul class="actions">
+                                                                    <li><a href="#" class="button alt">Leer mas</a></li>
+                                                                </ul>
 							</section>
 
 						</div>
+                                                
+                                                <% 
+
+                                                                                }
+
+                                                 %> 
 						
 					</div>
 

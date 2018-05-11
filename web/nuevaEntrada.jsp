@@ -4,6 +4,9 @@
     Author     : kamt
 --%>
 
+<%@page import="com.modelo.Vacante"%>
+<%@page import="java.util.List"%>
+<%@page import="com.dao.DaoNuevaEntrada"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -40,17 +43,44 @@
 					</header>
 					
 				</section>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                                                                            <%
+                                                                                DaoNuevaEntrada daoPro=new DaoNuevaEntrada();
+                                                                                List<Vacante> lstPv=daoPro.mostrarVacante();
+                                                                                for(Vacante d:lstPv ){
+            
+                                                                            %>
                                 <!-- generar con un for para cada entrada -->
 				<section id="main" class="container">
-					
+	
 					<div class="box">
-						
-						<h3>Entrada 1</h3>
-						<p>descricion</p>
-						
+                       
+						<h3>Codigo de Vacante: <%=d.getIdVacante()  %></h3>
+                                                <h4>Nº de puestos <%=d.getNoVacantes()  %></h4>
+						<p>Especificacion de la vacante: <%=d.getEspecificaciones()  %></p>
+                                                <ul class="actions">
+							<li><a href="#" class="button alt">Leer mas</a></li>
+						</ul>
 					</div>
 				</section>
+                                                                            <% 
 
+                                                                                }
+
+                                                                            %>
 
 			<!-- Footer -->
 				<footer id="footer">

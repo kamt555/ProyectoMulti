@@ -10,6 +10,19 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Registrate</title>
+        <% 
+            if(request.getAttribute("msj")!=null){
+        
+        %>
+        <script type="text/javascript">
+            
+            alert('<%= request.getAttribute("msj") %>');
+            
+        </script>
+        
+        <%
+            }    
+        %>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -39,7 +52,7 @@
 						<p></p>
 					</header>
 					<div class="box">
-						<form method="post" action="#">
+						<form method="post" action="procesarCrearCuenta">
 							
 							<div class="row uniform 50%">
 								<div class="12u">

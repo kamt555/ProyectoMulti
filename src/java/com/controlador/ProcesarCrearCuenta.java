@@ -5,6 +5,7 @@
  */
 package com.controlador;
 
+import com.dao.DaoCrearCuenta;
 import com.dao.daoUsuario;
 import com.modelo.TipoUsuario;
 import com.modelo.Usuario;
@@ -20,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author kamt
  */
-public class ProcesarUsuario extends HttpServlet {
+public class ProcesarCrearCuenta extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,32 +38,27 @@ public class ProcesarUsuario extends HttpServlet {
         PrintWriter out = response.getWriter();
         RequestDispatcher rq = null;
        String msj=null;
-       daoUsuario daop = new daoUsuario();
+       
+       DaoCrearCuenta daop = new DaoCrearCuenta();
        TipoUsuario prov = new TipoUsuario();
        Usuario prod = new Usuario();
+       
         try 
         {
-            prod.setIdUsuario(Integer.parseInt(request.getParameter("txtCodigo")));
+            
             prod.setCorreo(request.getParameter("txtEmail"));
             prod.setContrasenia(request.getParameter("txtPassword"));
-            prod.setEstado(request.getParameter("estado"));
+            
             
             
             prov.setIdTipoUsuario(Integer.parseInt(request.getParameter("tipoUsuario")));
             prod.setTipoUsuario(prov);
             if (request.getParameter("btnEnviar")!=null) {
                 daop.agregarUsuario(prod);
-                msj="datos agregados correctamente";
+                msj="As creado tu cuenta";
             }
-            else if (request.getParameter("btnModificar")!=null) {
-                daop.modificarUsuario(prod);
-                msj="datos modificados correctamente";
-            }
-            else if (request.getParameter("btnEliminar")!=null) {
-                daop.eliminarUsuario(prod);
-                msj="datos eliminados correctamente";
-            }
-            rq = request.getRequestDispatcher("crudUsuario.jsp");
+            
+            rq = request.getRequestDispatcher("login.jsp");
             request.setAttribute("msj", msj);
         } catch (Exception e) 
         {
