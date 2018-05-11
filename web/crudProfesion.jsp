@@ -43,7 +43,8 @@
        
 					
 					<nav id="nav">
-						<ul>
+						<ul> 
+                                                        <li> <a href="admin" class="button">Regersar</a></li>
 							<li> <a href="login.jsp?cerrar=true" class="button">Cerrar Sesion</a></li>
                                                         
 							
