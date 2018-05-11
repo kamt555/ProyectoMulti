@@ -45,12 +45,12 @@
 								<div class="12u">
                                                                     
                                                                     
-									<input type="email" name="btnEmail" id="email"  placeholder="Email" />
+									<input type="email" name="txtEmail" id="email"  placeholder="Email" />
 								</div>
 							</div>
                                                         <div class="row uniform 50%">
 								<div class="12u">
-                                                                    <input type="password" name="btnPassword" id="password"  placeholder="Password" />
+                                                                    <input type="password" name="txtPassword" id="password"  placeholder="Password" />
 								</div>
 							</div>
 							

@@ -66,6 +66,7 @@
                                                 Acceder a <a href="crudTipoEmpresa.jsp">Crud Tipo de Empresa</a><br>
                                                 Acceder a <a href="crudTipoVacante.jsp">Crud Tipo de Vacante</a><br>
                                                 Acceder a <a href="crudTrabajoEmpresa.jsp">Crud Trabajo en Empresas</a><br>
+                                                Acceder a <a href="crudUsuario.jsp">Crud Usuario</a><br>
                                             </p>
                                             </div>
                                             </div>
