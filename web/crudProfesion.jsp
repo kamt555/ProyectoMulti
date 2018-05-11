@@ -1,10 +1,10 @@
 <%-- 
-    Document   : admin
-    Created on : 05-07-2018, 05:33:46 PM
-    Author     : kevin mejia
+    Document   : crudProfesion
+    Created on : 05-10-2018, 09:43:37 PM
+    Author     : kamt
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>ç
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true" %>
 <%
     HttpSession sesion=request.getSession();
@@ -27,7 +27,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Admin</title>
+        <title>Crud Profecion</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -54,18 +54,17 @@
 			<!-- Main -->
 				<section id="main" class="container 75%">
 					<header>
-						<h2>Admin</h2>
+						<h2>Crud Profecion</h2>
 						<p></p>
 					</header>
 					<div class="box">
                                             <div class="row uniform 50%">
                                                 <div class="12u">
-                                            <p>
-                                                Acceder a <a href="crudProfesion.jsp">Crud Profecion</a><br>
-                                                Acceder a <a href="../proveedor.jsp">Crud Proveedor</a>
-            
-                                            </p>
-                                            </div>
+                                                    
+                                                    
+                                                    
+                                            
+                                                </div>
                                             </div>
 						
 					</div>
@@ -99,7 +98,6 @@
         
         
         <br>
-        
         
     </body>
 </html>
